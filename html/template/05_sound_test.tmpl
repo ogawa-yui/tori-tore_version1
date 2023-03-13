@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/audio.min.js"></script>
+<script>
+audiojs.events.ready(function() {
+var as = audiojs.createAll();
+});
+</script>
+<script src="js/js-webshim/minified/polyfiller.js"></script>
+<script> 
+   webshim.activeLang('en');
+   webshims.polyfill('forms');
+   webshims.cfg.no$Switch = true;
+</script> 
+
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+
+<header class="site-header">
+<nav>
+    <ul class="gnav__menu">
+    	<li class="gnav__menu__item">とりトレ</li>
+          <li class="gnav__menu__item">Username: <tmpl_var name = user> さん　
+            <input type="hidden" name="user" value="<tmpl_var name = user>" >
+          </li>
+    	</li>
+    </ul>
+</nav>
+</header>
+
+<h1>音声再生テスト</h1>
+<div id="container">
+  <div id="itemM">
+    音声が流れていますか？<br>
+    <form method="post" action="04_sound_setting.cgi" >
+    <input type="hidden" name='user' value="<tmpl_var name = user>" > 
+    流れていない場合は<input type="submit" id="mySubmit" value="こちら" class="btn">をクリックし、設定し直してください。</form>
+    音声が聞こえづらい場合、大きすぎる場合はPC側で音量調整を行ってください。<br>
+    <audio src='mp3/musicbox.mp3' autoplay></audio> 
+    <h3>設定をしたにも関わらず再生されない場合</h3>
+    特に「Safari」を使用している場合、トラブルが発生することが多いです。他のブラウザ（「Google Chrome」推奨）でもお試しください。
+    上記を試しても再生されない場合は、大変申し訳ございませんが、本実験に参加いただくことができません。xxx@yyyまでご連絡ください。
+    <form method="post" action="06_pretest_guide.cgi" >
+    <input type="hidden" name='user' value="<tmpl_var name = user>" > 
+    <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>"><br><br>
+    <input type="submit" id="mySubmit" value="事前腕試しの説明へ" class="btn"></form>
+    
+    </div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+</div><!-- container --> 
+
+</body></html>

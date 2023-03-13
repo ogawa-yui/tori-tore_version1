@@ -1,0 +1,590 @@
+@charset "UTF-8";
+
+/*                               */
+/*   Style sheet for TORI-TORE   */
+/*                               */
+/*      updated on 2020-08-03    */
+
+
+/* ------------- Overall settings -------------- */
+
+/* Height designation */
+html, body { height: 80%; }
+
+/* Overall color, line spacing, margins, and font */ 
+body {
+ 	font-family: sans-serif; /* Browser font unification */
+	background: #f0f4f6;
+	margin: 20px; /* Specify the outer margin of body */
+	padding: 30px 10px 50px 10px; /* Specify inner margin of body (top, right, bottom, left) */
+}
+
+/* Color when the cursor is placed on the link */ 
+a:hover{
+	color: #b7dbf2;
+	text-decoration: underline;
+}
+
+
+/* ------------- Header -------------- */
+.site-header{
+    background: #409887;
+    position: fixed; /* Header fixed */
+    width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.gnav__menu{
+    display: flex;
+	margin: 5px 0 5px 0;;
+}
+
+.gnav__menu__item {
+	list-style-type: none; /* Bullet without points */
+	margin-left: 30px;
+	color: #fff;
+	text-decoration: none; /* No decoration */
+}
+
+/* ------------- Title -------------- */
+
+h1 { /* Title of the page */
+	text-align: center;
+	margin: 0;
+	padding: 0 0 10px;
+}
+ 	
+
+h2 { 
+	margin-top: 20px; /* Leave a space above the title on the left */
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+	
+
+h3  {
+	color:#0000AA;
+}
+
+/* -------------- div,p tag -------------- */
+div.answer{ 
+	margin: 10px 0;
+}
+
+div.float-clear{ /* For all options */
+	overflow: hidden; /* Do not display even if out of the box */
+}	
+
+p.sub_title  {
+	font-size:130%;
+	text-align: center;
+}
+
+p.login {
+	text-align: center;
+}
+
+/* Text decoration showing correct or incorrect answers */
+p.correct_or_incorrect {
+	font-size:150%;
+	margin: 10px;
+	
+}
+
+p.form { /* Form */
+	text-align: right
+	cursor : pointer;
+}
+
+/* Individual font size settings */
+p.font50{
+	font-size:50%;
+}
+p.font75{
+	font-size:75%;
+}
+p.font120_center{
+	font-size:120%;
+	text-align: center;
+}
+p.font150{
+	font-size:150%;
+}
+
+fieldset{
+	border:none;
+}
+
+/* Table */
+.A { /* table A*/
+	border-collapse: collapse;
+}
+.A th, .A td {
+	border: 1px solid #8fbac8;
+	padding: 8px;
+}
+
+/* Image link hover */
+.image_link img:hover{
+	opacity:0.5; /* Transmittance 0.5*/
+}
+
+
+/* ------------- Grid layout -------------- */
+
+/* Whole Frame（Quiz_training）*/
+#container {
+	grid-gap:0 auto;
+	flex-flow: row;
+	max width: 1200px;
+	display: grid; /* Grid layout */
+	grid-template-rows: 170px 260px 10px 115px;
+	/* fr is written when all the margin sizes are used. */
+    grid-template-columns: 1fr 580px 230px 140px 210px 1fr; /*
+	
+}
+
+/* What goes into a container */
+#itemA { 
+	grid-row: 1 / 5;
+    grid-column: 2 / 3;
+	font-size: 200%; 
+	padding: 10px 0 10px 25px;
+	background-color: #fff; 
+}
+
+#itemB {
+	grid-row: 1 / 2;
+    grid-column: 3 / 4;
+	padding: 20px 20px 20px 40px; 
+	background-color: #fff; 
+}
+
+#itemC {
+	grid-row: 1 / 2;
+    grid-column: 4 / 7;
+	padding: 50px 0 20px; 
+	background-color: #fff;
+}
+
+#itemD {
+	grid-row: 2 / 3;
+    grid-column: 3 / 5;
+	padding: 20px 10px;	
+	background-color: #fff;
+}
+
+.vertical {
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	margin: 0;
+}
+
+#itemE {
+	grid-row: 2 / 3;
+    grid-column: 5 / 7;
+	padding: 50px 20px 20px;
+	background-color: #fff;
+}
+
+#itemF {
+	grid-row: 3 / 4;
+    grid-column: 3 / 7;
+	padding: 0 10px; 
+	background-color: #fff;
+}
+
+#itemG {
+	grid-row: 4 / 5;
+    grid-column: 3 / 5;
+	padding: 10px 20px 20px 50px; 
+	background-color: #fff;
+	font-size:150%;
+}
+
+#itemH {
+	grid-row: 4 / 5;
+    grid-column: 5 / 6;
+	padding: 0 20px; 
+	background-color: #fff;
+}
+
+#itemI {
+	grid-row: 1 / 5;
+    grid-column: 1 / 2;
+	background-color: #f0f4f6;
+}
+
+#itemJ {
+	grid-row: 1 / 5;
+    grid-column: 6 / 7;
+	background-color: #f0f4f6;
+}
+
+#itemK {
+	text-align: center;
+	grid-row: 1 / 5;
+    grid-column: 2 / 3	;
+	padding: 20px;
+	background-color: #ffffff;
+}
+
+#itemL {
+	text-align: center;
+	grid-row: 1 / 5;
+    grid-column: 3 / 6	;
+	background-color: #ffffff;
+}
+
+/* Whole Frame（besides Quiz_training）*/
+#container_vertically_long {
+	grid-gap:0 auto;
+	flex-flow: row;
+	display: grid; /* Grid layout */
+	/* fr is written when all the margin sizes are used. */
+	grid-template-rows: 7.5vw 9.6vw 0.6vw 6.9vw 1fr; 
+    grid-template-columns: 1fr 34.8vw 13.8vw 8.4vw 12.6vw 1fr;
+}
+
+/* Container besides Quiz_training */
+#itemM {
+	grid-row: 1 / 6;
+    grid-column: 2 / 6	;
+	background-color: #ffffff;
+	padding: 25px;
+	border: 1px solid #cccccc;
+}
+
+#itemN {
+	grid-row: 1 / 6;
+    grid-column: 1 / 2;
+	background-color: #f0f4f6;
+}
+
+#itemO {
+	grid-row: 1 / 6;
+    grid-column: 6 / 7;
+	background-color: #f0f4f6;
+}
+
+
+/* ------------- Submit button design -------------- */
+
+/* Small */
+.btn {
+	display       : inline-block;
+	border: 1px solid #cdcdcd;
+	border-radius : 10%;         /* Rounded corners */
+	font-size     : 12pt;        /* Font size */
+	text-align    : center;      /* Character position */
+	cursor        : pointer;     /* Cursor */
+	padding       : 4px 8px;     /* Margin */
+	background    : #cdcdcd;     /* Background color */
+	color         : #000000;     /* Font color */
+	line-height   : 1em;         /* Height per line */
+	opacity       : 1;           /* Transmittance */
+	transition    : .3s;         /* Smooth change */
+}
+
+.btn:hover{
+	opacity     : 0.8;           /* Transmittance when hovering */
+}
+
+
+/* Large */
+.next {
+	display       : inline-block;
+	border: 1px solid #409887;
+	border-radius : 10%;         /* Rounded corners */
+	font-size     : 28pt;        /* Font size */
+	text-align    : center;      /* Character position */
+	cursor        : pointer;     /* Cursor */
+	padding       : 12px 12px;   /* Margin */
+	background    : #409887;     /* Background color */
+	color         : #ffffff;     /* Font color */
+	line-height   : 1em;         /* Height per line */
+	opacity       : 0.8;         /* Transmittance */
+	transition    : .3s;         /* Smooth change */
+}
+
+.next:hover{
+	opacity     : 1;           /* Transmittance when hovering */
+}
+
+
+/* ------------- Choice button of bird species -------------- */
+.choices input[type="radio"] { /* Design of the radio button itself */
+	height : 50px;
+	vertical-align: top;         /* Alignment position */
+	display       : none;        /* Check box hidden */
+}
+
+ /* Label just after the checkbox */
+.choices input[type="radio"] + label {
+	display: block;                             /* Elementing the block level */
+	width         : 100%;
+	height: 100%;
+	line-height   : 150%;                       /* Line spacing within buttons */
+	margin        : 0;                     		/* Distance between buttons */
+	padding       : 0 10px;                     /* Margin for label */
+	font-size     : 25pt;                       /* Font size for label */
+	font-weight   : bold;                       /* Font Weight */
+	border        : 2px solid rgba(64, 152, 135, 0.61); /* Grid line for label */
+	border-radius : 5px;                        /* Rounded corners for label */
+	background    : #ffffff;                    /* Background for lebel */
+	cursor        : pointer;                    /* Cursor settings */
+	transition    : .2s;                        /* Smooth change */
+}
+
+
+ /* Label immediately after the selected checkbox */
+.choices input[type="radio"]:checked + label {
+	background    : rgba(64, 152, 135, 0.61);  /* Background for lebel */
+}
+ /* Hover for label immediately after unselected checkbox */
+.choices input[type="radio"]:not(:checked) + label:hover {
+	background    : rgba(64, 152, 135, 0.40);     /* Background for label */
+}
+
+
+/* ------------- When all bird species are options -------------- */
+.choices2 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.choices2 li{
+	margin-right: 1em;
+	float:left;
+}
+
+.choices2 input[type="radio"] { /* Design of the radio button itself */
+	height : 50px;
+	vertical-align: top;         /* Alignment position */
+	display       : none;        /* Check box hidden */
+}
+ /* Label just after the checkbox */
+.choices2 input[type="radio"] + label {
+	height        : 100%;
+	line-height   : 200%;                       /* Line spacing within buttons */
+	margin        : 0;                          /* Distance between buttons */
+	padding       : 0 10px;                     /* Margin for label */
+	font-size     : 20pt;                       //* Font size for label */
+	font-weight   : bold;                       /* Font Weight */
+	border        : 2px solid rgba(64, 152, 135, 0.61); /* Grid line for label */
+	border-radius : 5px;                        /* Rounded corners for label */
+	background    : #ffffff;                    /* Background for lebel */
+	cursor        : pointer;                    /* Cursor settings */
+	transition    : .2s;                        /* Smooth change */
+}
+
+
+ /* Label immediately after the selected checkbox */
+.choices2 input[type="radio"]:checked + label {
+  background    : rgba(64, 152, 135, 0.61);   /* Background for label */
+}
+ /* Hover for label immediately after unselected checkbox */
+.choices2 input[type="radio"]:not(:checked) + label:hover {
+  background    : rgba(64, 152, 135, 0.40);     /* Background for label */
+}
+
+
+/* ------------- audiojs player -------------- */
+.audiojs audio {
+}
+/* Player（Playback Bar）*/
+.audiojs {
+width: 60px;
+height: 60px;
+margin: 0;
+background: none;
+overflow: hidden;
+font-family: monospace;
+font-size: 12px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-o-box-shadow: none;
+box-shadow: none;
+}
+/* Play and stop buttons */
+.audiojs .play-pause {
+width: 60px;
+height: 60px;
+padding: 0;
+margin: 0;
+float: left;
+overflow: hidden;
+border: 0px solid #BDBDBD;
+}
+/* p element for play/stop buttons */
+.audiojs p {
+display: none;
+width: 60px;
+height: 60px;
+margin: 0px;
+cursor: pointer;
+}
+.audiojs .play {
+display: block;
+}
+/*
+Area displaying progress and loading status (light gray)
+.audiojs .scrubber {
+position: relative;
+float: left;
+width: 30px;
+background: #CCC;
+height: 4px;
+margin: 12px 0 0 0px;
+border-top: 0;
+border-left: 0px;
+border-bottom: 0px;
+overflow: hidden;
+}
+*/
+/* The part of the bar that displays the progress status (slightly darker blue than the playback button) */
+.audiojs .progress {
+position: absolute;
+top: 0px;
+left: 0px;
+height: 4px;
+width: 0px;
+background: #698D9C;
+z-index: 1;
+/* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc),
+color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc
+100%); */
+}
+/* Bar section displaying loading status (light gray) */
+.audiojs .loaded {
+position: absolute;
+top: 0px;
+left: 0px;
+height: 4px;
+width: 0px;
+background: #CCC;
+/* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222),
+color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222
+100%); */
+}
+/* Current playback time/total playback time and font */
+.audiojs .time {
+float: left;
+height: 30px;
+line-height: 30px;
+margin: 0px 0px 0px 8px;
+padding: 0px 0px 0px 0px;
+border-left: none;
+color: #666;
+text-shadow: none;
+display: none;
+}
+/* Current playback time and font */
+.audiojs .time em {
+padding: 0px 2px 0px 0px;
+color: #666;
+font-style: normal;
+display: none;
+}
+
+.audiojs .time strong {
+padding: 0px 0px 0px 2px;
+font-weight: normal;
+display: none;
+}
+.audiojs .error-message {
+float: left;
+display: none;
+margin: 0px 10px;
+height: 28px;
+width: 200px;
+overflow: hidden;
+line-height: 28px;
+white-space: nowrap;
+color: #fff;
+text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+-icab-text-overflow: ellipsis;
+-khtml-text-overflow: ellipsis;
+-moz-text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+}
+.audiojs .error-message a {
+color: #eee;
+text-decoration: none;
+padding-bottom: 1px;
+border-bottom: 1px solid #999;
+white-space: wrap;
+}
+/* Playback button */
+.audiojs .play {
+background: url(btn_play.png) center center no-repeat;
+margin-left: 1.45px;
+}
+.audiojs .play:hover {
+opacity: 0.8;
+}
+/* Loading button */
+.audiojs .loading {
+display: none;
+}
+/* error button */
+.audiojs .error {
+
+display: none;
+}
+/* Pause button */
+.audiojs .pause {
+background: url(btn_pause_hover.png) center center no-repeat;
+}
+.audiojs .pause:hover {
+opacity: 0.8;
+}
+.playing .play, .playing .loading, .playing .error {
+display: none;
+}
+.playing .pause {
+display: block;
+}
+.loading .play, .loading .pause, .loading .error {
+display: none;
+}
+.loading .loading {
+display: block;
+}
+.error .time, .error .play, .error .pause, .error .scrubber, .error .loading {
+display: none;
+}
+.error .error {
+display: block;
+}
+.error .play-pause p {
+cursor: auto;
+}
+.error .error-message {
+display: block;
+}
+/* Information of playing song */
+.track-details {
+clear: both;
+height: 28px;
+width: 200px;
+padding: 0px 6px;
+background: #FFF;
+color: #3A3A3A;
+font-size: 10px;
+line-height: 28px;
+}
+.track-details:before {
+content: '♬ Now Playing: ';
+}
+
+
+a.no_decoration:hover{
+text-decoration: none;
+color: black;
+}

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+<header class="site-header">
+  <nav>
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user> さん </li>
+    </ul>
+    
+  </nav>
+</header>
+
+<h1>事後アンケート</h1> 
+<div id="container_vertically_long">
+  <div id="itemM">
+
+最後に、事後アンケートにご協力いただければ幸いです。<br>
+本アンケートは、鳥類音声種判別スキル向上のためのトレーニングについて、その効果を明らかにすること、本サイトをよりよいものにすることを目的に実施しております。<br>
+アンケート結果は、本調査に関する研究のデータとして使用させていただきますが、ご回答はすべて統計的に処理し、回答をそのままの形で公表すること、及び、個人が特定できる形で公表することは一切ありません。<br><br>
+<form method="post" action="19_postquestionnaire_verification.cgi" >
+<input type="hidden" name="user" value="<tmpl_var name = user>">
+<hr>
+<p class="sub_title">とりトレ事後アンケート</p>
+
+
+<fieldset>
+<h3><legend>【野鳥に関する質問】</legend></h3>
+
+<fieldset>
+<legend><b>Q1. ご自身の野鳥に対する興味・関心について、クイズを行うことで変化はありましたか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q1" value="Q1. ご自身の野鳥に対する興味・関心について、クイズを行うことで変化はありましたか？">
+<label><input type="radio" name="a1" value="1. とてもあった" required>1. とてもあった</label>　
+<label><input type="radio" name="a1" value="2. あった" required>2. あった</label>　
+<label><input type="radio" name="a1" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a1" value="4. あまりなかった" required>4. あまりなかった</label>　
+<label><input type="radio" name="a1" value="5. まったくなかった" required>5. まったくなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q2. ご自身の野鳥に対する興味・関心について、クイズを行うことで以下に挙げた詳細の項目では変化がありましたか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q2" value="Q2. ご自身の野鳥に対する興味・関心について、クイズを行うことで以下に挙げた詳細の項目では変化がありましたか？">
+
+<ul>
+<fieldset>
+<legend><b><li>バードウォッチング（野鳥観察）について</b><br>
+　バードウォッチング（野鳥観察）とは、野鳥調査、調査を目的としない趣味のバードウォッチング（野鳥観察）、他の野外活動（登山・散歩等）に際して副次的に行うバードウォッチング（野鳥観察）等を含みます。</li><br>
+<input type="hidden" name="q2_1" value="・バードウォッチング（野鳥観察）について">
+<label><input type="radio" name="a2_1" value="1. とてもあった" required>1. とてもあった</label>　
+<label><input type="radio" name="a2_1" value="2. あった" required>2. あった</label>　
+<label><input type="radio" name="a2_1" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a2_1" value="4. あまりなかった" required>4. あまりなかった</label>　
+<label><input type="radio" name="a2_1" value="5. まったくなかった" required>5. まったくなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>ご自身が野鳥の鳴き声を学習することについて</b></li></legend>
+<input type="hidden" name="q2_2" value="・ご自身が野鳥の鳴き声を学習することについて">
+<label><input type="radio" name="a2_2" value="1. とてもあった" required>1. とてもあった</label>　
+<label><input type="radio" name="a2_2" value="2. あった" required>2. あった</label>　
+<label><input type="radio" name="a2_2" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a2_2" value="4. あまりなかった" required>4. あまりなかった</label>　
+<label><input type="radio" name="a2_2" value="5. まったくなかった" required>5. まったくなかった</label>
+</fieldset>
+<br>
+</fieldset>
+</ul>
+<fieldset>
+<legend><b>Q3. 現時点でのご自身の野鳥に対する興味・関心について、どれが当てはまりますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q3" value="Q3. 現時点でのご自身の野鳥に対する興味・関心について、どれが当てはまりますか？">
+<label><input type="radio" name="a3" value="1. とても興味・関心がある" required>1. とても興味・関心がある</label>　
+<label><input type="radio" name="a3" value="2. 興味・関心がある" required>2. 興味・関心がある</label>　
+<label><input type="radio" name="a3" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a3" value="4. 興味・関心がない" required>4. 興味・関心がない</label>　
+<label><input type="radio" name="a3" value="5. まったく興味・関心がない" required>5. まったく興味・関心がない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q4. 現時点でのご自身の野鳥に関する興味・関心について、以下に挙げた詳細の項目ではどれが当てはまりますか？<br>
+　　いずれかの番号をクリックしてください。</b></legend>
+<input type="hidden" name="q4" value="Q4. 現時点でのご自身の野鳥に関する興味・関心について、以下に挙げた詳細の項目ではどれが当てはまりますか？">
+
+<ul>
+<fieldset>
+<legend><b><li>バードウォッチング（野鳥観察）について</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q4_1" value="・バードウォッチング（野鳥観察）について">
+<label><input type="radio" name="a4_1" value="1. とても興味・関心がある" required>1. とても興味・関心がある</label>　
+<label><input type="radio" name="a4_1" value="2. 興味・関心がある" required>2. 興味・関心がある</label>　
+<label><input type="radio" name="a4_1" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a4_1" value="4. 興味・関心がない" required>4. 興味・関心がない</label>　
+<label><input type="radio" name="a4_1" value="5. まったく興味・関心がない" required>5. まったく興味・関心がない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>ご自身が野鳥の鳴き声を学習することについて</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q4_2" value="・ご自身が野鳥の鳴き声を学習することについて">
+<input type="radio" name="a4_2" value="1. とても興味・関心がある" id="very interested" required><label for="very interested">1. とても興味・関心がある</label>　
+<input type="radio" name="a4_2" value="2. 興味・関心がある" id="interested" required><label for="interested">2. 興味・関心がある</label>　
+<input type="radio" name="a4_2" value="3. どちらでもない" id="neither" required><label for="neither">3. どちらでもない</label>　
+<input type="radio" name="a4_2" value="4. 興味・関心がない" id="not so interested" required><label for="not so interested">4. 興味・関心がない</label>　
+<input type="radio" name="a4_2" value="5. まったく興味・関心がない" id="not interested" required><label for="not interested">5. まったく興味・関心がない</label>
+</fieldset>
+</ul>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q5. とりトレで出題された26種の野鳥のなかで、<u>名前を知っている</u>野鳥はどの程度でしたか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q5" value="Q5. とりトレで出題された26種の野鳥のなかで、名前を知っている野鳥はどの程度でしたか？">
+<label><input type="radio" name="a5" value="1. すべて知っていた" required>1. すべて知っていた</label>　
+<label><input type="radio" name="a5" value="2.ほぼ知っていた " required>2. ほぼ知っていた</label>　
+<label><input type="radio" name="a5" value="3. 半分程度知っていた" required>3. 半分程度知っていた</label>　
+<label><input type="radio" name="a5" value="4. 少し知っていた" required>4. 少し知っていた</label>　
+<label><input type="radio" name="a5" value="5. まったく知らなかった" required>5. まったく知らなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q6. とりトレで出題された26種の野鳥のなかで、<u>鳴き声を聞いたことがある</u>野鳥はどの程度でしたか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q6" value="Q6. とりトレで出題された26種の野鳥のなかで、鳴き声を聞いたことがある野鳥はどの程度でしたか？">
+<label><input type="radio" name="a6" value="1. すべて知っていた" required>1. すべて知っていた</label>　
+<label><input type="radio" name="a6" value="2.ほぼ知っていた " required>2. ほぼ知っていた</label>　
+<label><input type="radio" name="a6" value="3. 半分程度知っていた" required>3. 半分程度知っていた</label>　
+<label><input type="radio" name="a6" value="4. 少し知っていた" required>4. 少し知っていた</label>　
+<label><input type="radio" name="a6" value="5. まったく知らなかった" required>5. まったく知らなかった</label>
+</fieldset>
+<br>
+
+</fieldset> <!--【】-->
+
+<fieldset>
+<h3><legend>【とりトレに関する質問】</legend></h3>
+
+<fieldset>
+<legend><b>Q7. とりトレでのトレーニングに満足していますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q7" value="Q7. とりトレでのトレーニングに満足していますか？"><br>
+<label><input type="radio" name="a7" value="1. 満足" required>1. 満足</label>　
+<label><input type="radio" name="a7" value="2. やや満足" required>2. やや満足</label>　
+<label><input type="radio" name="a7" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a7" value="4. やや不満" required>4. やや不満</label>　
+<label><input type="radio" name="a7" value="5. 不満" required>5. 不満</label><br><br>
+</fieldset>
+
+<fieldset>
+<legend><b>Q8. 以下の項目について、どれが当てはまりますか？いずれかの番号をクリックしてください。</b><br>
+<input type="hidden" name="q8" value="Q8. 以下の項目について、どれが当てはまりますか？">
+<ul>
+<fieldset>
+<legend><b><li>鳴き声による種同定の技能が向上した</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_1" value="・鳴き声による種同定の技能が向上した">
+<label><input type="radio" name="a8_1" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_1" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_1" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_1" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_1" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>とりトレの一連の流れがスムーズにできた</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_2" value="・とりトレの一連の流がスムーズにできた">
+<label><input type="radio" name="a8_2" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_2" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_2" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_2" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_2" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>とりトレに関する説明スライドがわかりやすかった</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_3" value="・とりトレに関する説明スライドがわかりやすかった">
+<label><input type="radio" name="a8_3" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_3" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_3" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_3" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_3" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>クイズプログラムは使いやすかった</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_4" value="・クイズプログラムは使いやすかった">
+<label><input type="radio" name="a8_4" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_4" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_4" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_4" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_4" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>トレーニングは大変だった</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_5" value="・トレーニングは大変だった">
+<label><input type="radio" name="a8_5" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_5" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_5" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_5" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_5" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>このプログラムが一般公開されたら家族や親しい知人に紹介したい</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_6" value="・このプログラムが一般公開されたら家族や親しい知人に紹介したい">
+<label><input type="radio" name="a8_6" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_6" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_6" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_6" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_6" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>このプログラムが一般公開されたら、またトレーニングをしたい</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_7" value="・このプログラムが一般公開されたら、またトレーニングをしたい">
+<label><input type="radio" name="a8_7" value="1. とてもそう思う" required>1. とてもそう思う</label>　
+<label><input type="radio" name="a8_7" value="2. そう思う" required>2. そう思う</label>　
+<label><input type="radio" name="a8_7" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a8_7" value="4. そう思わない" required>4. そう思わない</label>　
+<label><input type="radio" name="a8_7" value="5. まったくそう思わない" required>5. まったくそう思わない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>設定した目標（一週間で200問のクイズを解くこと）</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q8_8" value="・設定した目標（一週間で200問のクイズを解くこと）">
+<label><input type="radio" name="a8_8" value="1. とても多い" required>1. とても多い</label>　
+<label><input type="radio" name="a8_8" value="2. 多い" required>2. 多い</label>　
+<label><input type="radio" name="a8_8" value="3. ちょうどいい" required>3. ちょうどいい</label>　
+<label><input type="radio" name="a8_8" value="4. 少ない" required>4. 少ない</label>　
+<label><input type="radio" name="a8_8" value="5. とても少ない" required>5. とても少ない</label>
+</fieldset>
+</ul>
+</fieldset> <!--Q2-->
+
+<fieldset>
+<legend><b>Q9. 今回の実験では、個々人の習熟度に応じ適応的に出題される問題が変化するようなクイズを、半分の被験者に出題しました。クイズのなかで以下の項目について実感できましたか？（腕試しは含みません）いずれかの番号をクリックしてください。</b><br>
+<input type="hidden" name="q9" value="Q9. クイズのなかで以下の項目について実感できましたか？（腕試しは含みません）">
+<ul>
+<fieldset>
+<legend><b><li>クイズで間違えた種が、その後のクイズでより多く出題された</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_1" value="・クイズで間違えた種が、その後のクイズでより多く出題された">
+<label><input type="radio" name="a9_1" value="1. とても実感できた" required>1. とても実感できた</label>　
+<label><input type="radio" name="a9_1" value="2. 実感できた" required>2. そう思う</label>　
+<label><input type="radio" name="a9_1" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a9_1" value="4. あまり実感できなかった" required>4. あまり実感できなかった</label>　
+<label><input type="radio" name="a9_1" value="5. まったく実感できなかった" required>5. まったく実感できなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>習得した種の出題頻度が下がった</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_2" value="・習得した種の出題頻度が下がった">
+<label><input type="radio" name="a9_2" value="1. とても実感できた" required>1. とても実感できた</label>　
+<label><input type="radio" name="a9_2" value="2. 実感できた" required>2. そう思う</label>　
+<label><input type="radio" name="a9_2" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a9_2" value="4. あまり実感できなかった" required>4. あまり実感できなかった</label>　
+<label><input type="radio" name="a9_2" value="5. まったく実感できなかった" required>5. まったく実感できなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>たまに習得した種も出題された</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_3" value="・たまに習得した種も出題された">
+<label><input type="radio" name="a9_3" value="1. とても実感できた" required>1. とても実感できた</label>　
+<label><input type="radio" name="a9_3" value="2. 実感できた" required>2. そう思う</label>　
+<label><input type="radio" name="a9_3" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a9_3" value="4. あまり実感できなかった" required>4. あまり実感できなかった</label>　
+<label><input type="radio" name="a9_3" value="5. まったく実感できなかった" required>5. まったく実感できなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>正解の種の習熟度が上がると、鳴き声が似た種が不正解選択肢に登場した（習熟度が低いうちは登場しなかった）</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_4" value="・正解の種の習熟度が上がると、鳴き声が似た種が不正解選択肢に登場した（習熟度が低いうちは登場しなかった）">
+<label><input type="radio" name="a9_4" value="1. とても実感できた" required>1. とても実感できた</label>　
+<label><input type="radio" name="a9_4" value="2. 実感できた" required>2. そう思う</label>　
+<label><input type="radio" name="a9_4" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a9_4" value="4. あまり実感できなかった" required>4. あまり実感できなかった</label>　
+<label><input type="radio" name="a9_4" value="5. まったく実感できなかった" required>5. まったく実感できなかった</label>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b><li>正解の種の習熟度が低いうちは不正解選択肢に習熟度が高い種、習熟度が上がると不正解選択肢に習熟度が低い種が登場した</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_5" value="・正解の種の習熟度が低いうちは不正解選択肢に習熟度が高い種、習熟度が上がると不正解選択肢に習熟度が低い種が登場した">
+<label><input type="radio" name="a9_5" value="1. とても実感できた" required>1. とても実感できた</label>　
+<label><input type="radio" name="a9_5" value="2. 実感できた" required>2. そう思う</label>　
+<label><input type="radio" name="a9_5" value="3. どちらともいえない" required>3. どちらともいえない</label>　
+<label><input type="radio" name="a9_5" value="4. あまり実感できなかった" required>4. あまり実感できなかった</label>　
+<label><input type="radio" name="a9_5" value="5. まったく実感できなかった" required>5. まったく実感できなかった</label>
+</fieldset>
+</ul>
+
+<fieldset>
+<b><label for="feedback">Q10. もしよろしければ、感想・改善点等ご自由にお書きください。</label></b><br>
+<input type="hidden" name="q10" value="感想・改善点等">
+<textarea name="a10" cols=70 rows=5 id="feedback"></textarea>
+</fieldset>
+<br>
+
+</fieldset> <!--【】-->
+
+<input type="submit" value="回答内容の確認"  class="btn"></form>
+<br>
+
+</div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+
+</div>
+
+</body></html>

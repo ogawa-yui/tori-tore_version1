@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/audio.min.js"></script>
+<script>
+audiojs.events.ready(function() {
+var as = audiojs.createAll();
+});
+</script>
+<script src="js/js-webshim/minified/polyfiller.js"></script>
+  <script> 
+     webshim.activeLang('en');
+     webshims.polyfill('forms');
+     webshims.cfg.no$Switch = true;
+  </script> 
+  
+<script>
+function startTimer() {
+   setTimeout( showBox , 3000 ); // Starts a 3-second timer when loading, executes "showBox" after 3 seconds
+}
+function showBox() {
+   document.getElementById("temporaryBox").style.display = "inline"; // show box
+}
+</script>
+
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body onLoad = "startTimer()"><!-- Start timer on loading -->
+
+
+<form name="form1" method="post" action="00_login_01.cgi">
+<header class="site-header">
+<nav>
+    <ul class="gnav__menu">
+    	<li class="gnav__menu__item">とりトレ</li>
+          <li class="gnav__menu__item">Username: <tmpl_var name = user> さん　
+            <input type="submit" value="保存（ログアウト）" class="btn"></form>
+          </li>
+    	</li>
+    	<li class="gnav__menu__item">
+    	本日<tmpl_var name = num_quiz_solved_today>問、累計<tmpl_var name = num_quiz_solved_allday>問解きました。
+    	<tmpl_if name="goal_achieved_today">
+    	  目標達成です！
+    	<tmpl_else>
+    	  あと<tmpl_var name = num_quiz_left_today>問！
+    	</tmpl_if>
+    	</li>
+    </ul>
+</nav>
+</header>
+</form>
+<form method="post" action="11_answer.cgi" >
+<h1>鳴き声クイズ</h1>
+<div id="container">
+  <div id="itemA">
+    この鳴き声の鳥は次のうちどれ？<br>
+    <audio src='<tmpl_var name = mp3_file_path_name >' autoplay></audio>
+    <table class="choices" id="makeImg"> 
+      <tmpl_var name = choices_jp_forms>
+    </table>
+    <input type="hidden" name='user' value="<tmpl_var name = user>" >        
+    <input type="hidden" name="one_sp_until_all_learned" value="<tmpl_var name = one_sp_until_all_learned>" >
+    <input type="hidden" name="correct_answer" value="<tmpl_var name = correct_answer>" >
+    <input type="hidden" name="sp_roman" value="<tmpl_var name = sp_roman>" >
+    <input type="hidden" name="answer_license" value="<tmpl_var name = answer_license>" >
+    <input type="hidden" name="sp_songcall_id" value="<tmpl_var name = sp_songcall_id>" >
+    <input type="hidden" name="mp3_file_path_name" value="<tmpl_var name = mp3_file_path_name>" >
+    <input type="hidden" name="spectrogram" value="<tmpl_var name = spectrogram>" >
+    <input type="hidden" name="choices" value="<tmpl_var name = choices>" >
+    <input type="hidden" name="choices_jp" value="<tmpl_var name = choices_jp>" >
+    <input type="hidden" name="mp3_score" value="<tmpl_var name = mp3_score>" >
+    <input type="hidden" name="num_quiz_solved_today" value="<tmpl_var name = num_quiz_solved_today>">
+    <input type="hidden" name="num_quiz_solved_allday" value="<tmpl_var name = num_quiz_solved_allday>">
+    <input type="hidden" name="posttest" value="<tmpl_var name = posttest>" >
+    <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>" >
+    <input type="hidden" name="goal_achieved" value="<tmpl_var name = goal_achieved>" >
+    <div class="answer"> 
+      <p id="temporaryBox" style="display: none;">
+        <input type="submit" value="回答！" class="next"></form>
+      </p>
+      
+      <form method="post" action="sound.cgi" >
+      <input type="hidden" name='user' value="<tmpl_var name = user>" >
+      <input type="hidden" name='content_info' value="クイズ" >
+      <input type="hidden" name='content_url' value="10_quiz.cgi" >
+      <p class="font50">※音声が再生されない場合
+      <input type="submit" id="mySubmit" value="こちら" class="btn">をクリック</p></form>
+      
+    </div>
+  </div><!--A-->
+  
+  <div id="itemB"><!----></div> <!-- itemB -->
+  <div id="itemC"><!--blank space--></div> <!-- itemC -->
+  <div id="itemD"><!--blank space--></div> <!-- itemD -->
+  <div id="itemE"><!--blank space--></div> <!-- itemE -->
+  <div id="itemF"><!--blank space--></div> <!-- itemF -->
+  <div id="itemG"><!--blank space--></div> <!-- itemG -->
+  <div id="itemH"><!--blank space--></div> <!-- itemH -->
+  <div id="itemI"><!--blank space--></div> <!-- itemI -->
+  <div id="itemJ"><!--blank space--></div> <!-- itemJ -->
+  <div id="itemP">
+  </div>
+</div><!-- container --> 
+</body></html>
