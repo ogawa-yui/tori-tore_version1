@@ -1,1 +1,0 @@
-Date(YYYY/MM/DD)	Unix time	IP	Browser information	Username	Mp3	Correct answer	Users answer	Choices

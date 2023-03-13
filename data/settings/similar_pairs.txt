@@ -1,8 +1,0 @@
-gabicho_song_01	キビタキ	1	
-shijukara_song_01	ヤマガラ	1
-hashibutogarasu_call_01	ハシボソガラス	1
-hashibosogarasu_call_01	ハシブトガラス	1
-segurosekirei_song_01	ハクセキレイ	2
-hakusekirei_song_01	セグロセキレイ	2
-yamagara_song_01	シジュウカラ	1
-kibitaki_song_01	ガビチョウ	1
