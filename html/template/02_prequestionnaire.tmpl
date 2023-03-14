@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<script src="js/jquery-3.4.1.min.js"></script>
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+
+</head>
+
+<body>
+<header class="site-header">
+  <nav>
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user>　さん </li>
+    </ul>
+  </nav>
+</header>
+
+<h1>事前アンケート</h1>
+<div id="container_vertically_long">
+  <div id="itemM">
+<p class="sub_title">
+<form method="post" action="03_prequestionnaire_verification.cgi" >
+<input type="hidden" name="user" value="<tmpl_var name = user>">
+<input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>">
+<fieldset>
+<p>　本アンケートは、鳥類音声種判別スキル向上のためのトレーニングについて、その効果の要因を明らかにすることを目的に実施しております。アンケート結果は、本調査に関する研究のデータとして使用させていただきますが、ご回答はすべて統計的に処理し、回答をそのままの形で公表すること、及び、個人が特定できる形で公表することは一切ありません。</p>
+<p>　また、実験への参加は、対象者自身の自由意思によって決定され、調査の参加に同意した後であっても、いつでも参加を取りやめることができ、そのことによって対象者が不利益を被ることはありません。</p>
+<p>　以下の誓約事項についてご確認のうえ、本実験への参加に同意する場合は、以下のチェックボックスにチェックの上、アンケートにお答えください。本実験を受けることに同意しなくても何ら不利益を受けません。ただし、この同意は、あくまでも自由意思によるものであり、不利益を受けず随時撤回できます。辞退する場合は、haken@t-ec.jpまでご連絡ください。</p>
+<li>「とりトレ」へのログイン情報（URL、ユーザーID及びパスワード）を第三者に渡さないこと。</li>
+<li>事前の指示に従って実験に参加すること。</li>
+<li>実験中に指示に従わない不正行為が確認された場合や、設定した期間中に実験が終了しなかった場合は謝金を支払わないこと。</li>
+<li>とりトレで紹介されているURL以外の外部サイトで、野鳥に関する情報を確認しないこと（例：YouTube）。</li>
+<li>とりトレの内容について他の方と相談しない、また、とりトレで得た情報は他者に伝えないこと。</li>
+</p>
+<label><input type="checkbox" name="confirm" value="同意する" required>本実験の参加に同意する</label>
+</fieldset>
+
+<hr>
+
+<fieldset>
+<h3><legend>【野鳥に関する質問】</legend></h3>
+
+<fieldset>
+<legend><b>Q1. 現時点でのご自身の野鳥に対する興味・関心について、どれが当てはまりますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q1" value="Q1. 現時点でのご自身の野鳥に対する興味・関心について、どれが当てはまりますか？">
+<label><input type="radio" name="a1" value="1. とても興味・関心がある" required>1. とても興味・関心がある</label>　
+<label><input type="radio" name="a1" value="2. 興味・関心がある" required>2. 興味・関心がある</label>　
+<label><input type="radio" name="a1" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a1" value="4. 興味・関心がない" required>4. 興味・関心がない</label>　
+<label><input type="radio" name="a1" value="5. まったく興味・関心がない" required>5. まったく興味・関心がない</label>
+</fieldset>
+<br>
+
+<fieldset>
+<b><legend>Q2. 現時点でのご自身の野鳥に関する興味・関心について、以下に挙げた詳細の項目ではどれが当てはまりますか？<br>
+　　いずれかの番号をクリックしてください。</legend></b>
+<input type="hidden" name="q2" value="Q2. 現時点でのご自身の野鳥に関する興味・関心について、以下に挙げた詳細の項目ではどれが当てはまりますか？">
+
+<ul>
+<fieldset>
+<legend><b><li>バードウォッチング（野鳥観察）について</b><font color="red">*必須</font></li></legend>
+　バードウォッチング（野鳥観察）とは、野鳥調査、調査を目的としない趣味のバードウォッチング（野鳥観察）、他の野外活動（登山・散歩等）に際して副次的に行うバードウォッチング（野鳥観察）等を含みます。<br>
+<input type="hidden" name="q2_1" value="・バードウォッチング（野鳥観察）について">
+<label><input type="radio" name="a2_1" value="1. とても興味・関心がある" required>1. とても興味・関心がある</label>　
+<label><input type="radio" name="a2_1" value="2. 興味・関心がある" required>2. 興味・関心がある</label>　
+<label><input type="radio" name="a2_1" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a2_1" value="4. 興味・関心がない" required>4. 興味・関心がない</label>　<br>
+<label><input type="radio" name="a2_1" value="5. まったく興味・関心がない" required>5. まったく興味・関心がない</label>
+<br>
+</fieldset>
+
+<fieldset>
+<legend><b><li>ご自身が野鳥の鳴き声を学習することについて</b><font color="red">*必須</font></li></legend>
+<input type="hidden" name="q2_2" value="・ご自身が野鳥の鳴き声を学習することについて">
+<label><input type="radio" name="a2_2" value="1. とても興味・関心がある" required>1. とても興味・関心がある</label>　
+<label><input type="radio" name="a2_2" value="2. 興味・関心がある" required>2. 興味・関心がある</label>　
+<label><input type="radio" name="a2_2" value="3. どちらでもない" required>3. どちらでもない</label>　
+<label><input type="radio" name="a2_2" value="4. 興味・関心がない" required>4. 興味・関心がない</label>　<br>
+<label><input type="radio" name="a2_2" value="5. まったく興味・関心がない" required>5. まったく興味・関心がない</label>
+</fieldset>
+</ul>
+</fieldset>
+
+<fieldset>
+<legend><b>Q3. ご自身のバードウォッチング（野鳥観察）の経験レベルについて、どれが当てはまりますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q3" value="Q3. ご自身のバードウォッチング（野鳥観察）の経験レベルについて、どれが当てはまりますか？">
+<label><input type="radio" name="a3" value="1. 経験なし" required>1. 経験なし</label>　
+<label><input type="radio" name="a3" value="2. 初心者" required>2.初心者</label>　
+<label><input type="radio" name="a3" value="3. 中級者" required>3. 中級者</label>　
+<label><input type="radio" name="a3" value="4. 上級者" required>4. 上級者</label>　
+</fieldset>
+
+<fieldset>
+<legend><b>Q4. ご自身の鳥の鳴き声による種判別（鳥類の鳴き声から種名を把握すること）の経験レベルについて、どれが当てはまりますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q4" value="Q4. ご自身の鳥の鳴き声による種判別（鳥類の鳴き声から種名を把握すること）の経験レベルについて、どれが当てはまりますか？">
+<label><input type="radio" name="a4" value="1. 経験なし" required>1. 経験なし</label>　
+<label><input type="radio" name="a4" value="2. 初心者" required>2.初心者</label>　
+<label><input type="radio" name="a4" value="3. 中級者" required>3. 中級者</label>　
+<label><input type="radio" name="a4" value="4. 上級者" required>4. 上級者</label>　
+</fieldset>
+
+
+</fieldset>
+
+<fieldset>
+<h3><legend>【自然体験等に関する質問】</legend></h3>
+<fieldset>
+<legend><b>Q5. ここ1年、自然体験活動を行ったことがありますか。いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+　自然体験活動は、「登山やキャンプ、ハイキング等といった野外活動、又は星空観察や動植物観察といった自然・環境に係る学習活動」のことを指します。<br>
+<input type="hidden" name="q5" value="Q5. ここ1年、自然体験活動を行ったことがありますか。">
+<label><input type="radio" name="a5" value="1. はい" required>1. はい</label>　
+<label><input type="radio" name="a5" value="2. いいえ" required>2. いいえ</label>　
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q6. 環境保全活動に参加したことがありますか。いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+　「環境保全活動」は、「社会を構成する個人、家庭、民間団体、事業者、行政等といったあらゆる主体が、環境問題（気候変動対策、循環型社会の形成、生物多様性の保全をはじめとする問題）を自らの問題としてとらえ、自発的に手足を動かして取り組んでいこうとする活動」のことを指します。例えば、公園や樹林・農地・河川・山岳地・海辺等における、草刈り、植林、樹木の剪定、清掃活動、農作業体験、自然教室、動植物の調査、外来生物除去、登山道整備などの活動です。<br>
+<input type="hidden" name="q6" value="Q6. 環境保全活動に参加したことがありますか。">
+<label><input type="radio" name="a6" value="1. はい" required>1. はい</label>　
+<label><input type="radio" name="a6" value="2. いいえ" required>2. いいえ</label>　
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Q7. 今までに鳥（例えばインコ・文鳥など）を飼ったことがありますか？いずれかの番号をクリックしてください。</b><font color="red">*必須</font></legend>
+<input type="hidden" name="q7" value="Q7. 今までに鳥（例えばインコ・文鳥など）を飼ったことがありますか？">
+<label><input type="radio" name="a7" value="1. はい" required>1. はい</label>　
+<label><input type="radio" name="a7" value="2. いいえ" required>2. いいえ</label>　
+</fieldset>
+
+</fieldset>
+<br>
+
+<fieldset>
+<h3><legend>【この調査に関する質問】</legend></h3>
+
+<fieldset>
+<legend><b>Q8. この調査に協力しようと思われた理由について当てはまるものをクリックしてください。</b>（複数回答可）<font color="red">*必須</font></legend>
+<input type="hidden" name="q8" value="Q8. この調査に協力しようと思われた理由について">
+<label><input type="checkbox" class="q8" name="a8_1" value="1. 鳥の鳴き声を覚えたい">1. 鳥の鳴き声を覚えたい</label>　
+<label><input type="checkbox" class="q8" name="a8_2" value="2. 鳥類のモニタリング調査の発展に協力したい">2. 鳥類のモニタリング調査の発展に協力したい</label>　
+<label><input type="checkbox" class="q8" name="a8_3" value="3. 効果測定の研究に協力したい">3. 効果測定の研究に協力したい</label>　
+<label><input type="checkbox" class="q8" name="a8_4" value="4. 時間があった">4. 時間があった</label><br>
+<label><input type="checkbox" class="q8" name="a8_5" value="5. 報酬がほしかった">5. 報酬がほしかった</label>　
+<label><input type="checkbox" class="q8" name="a8_6" value="6. その他">6. その他</label>　
+<label for="other1">その他の場合</label><input type="text" id="other1" name="a8_7" size="" maxlength=""><br><br>
+</fieldset>
+
+</fieldset>
+
+<fieldset>
+<h3><legend>【あなた自身に関する質問】</legend></h3>
+
+<fieldset>
+<legend><b>Q9. あなたの性別・学年・出身地について、いずれかの番号をクリックしてください。</b></legend>
+<input type="hidden" name="q9" value="Q9. あなたの性別・年代・出身地について">
+
+<ul>
+<fieldset>
+<legend><li>性別<font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_1" value="性別">
+<label><input type="radio" name="a9_1" value="1. 男性" required>1.男性</label>
+<label><input type="radio" name="a9_1" value="2. 女性" required>2.女性</label>
+<label><input type="radio" name="a9_1" value="3. その他" required>3.その他</label>
+<label><input type="radio" name="a9_1" value="99. 回答しない" required>4. 回答しない</label>
+</fieldset>
+
+
+<fieldset>
+<legend><li>学年<font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_2" value="学年">
+<label><input type="radio" name="a9_2" value="1. 1年生" required>1. 1年生</label>
+<label><input type="radio" name="a9_2" value="2. 2年生" required>2. 2年生</label>
+<label><input type="radio" name="a9_2" value="3. 3年生" required>3. 3年生</label>
+<label><input type="radio" name="a9_2" value="4. 4年生" required>4. 4年生</label>
+<label><input type="radio" name="a9_2" value="5. その他" required>5. その他</label>
+<label><input type="radio" name="a9_2" value="99. 回答しない" required>6. 回答しない</label><br>
+</fieldset>
+
+<fieldset>
+<legend><li>出身地<font color="red">*必須</font></li></legend>
+<input type="hidden" name="q9_3" value="出身地">
+<select name="a9_3" size=1 required>
+  <tmpl_var name = prefectures_choices>
+</select>
+　<label for="other2">その他の場合</label>　<input type="text" id="other2" name="a9_4" size="" maxlength=""><br>
+</fieldset>
+
+</fieldset>
+<ul>
+</fieldset>
+<br>
+
+<br>
+
+<input type="submit" value="回答内容の確認"  class="btn"></form>
+<br>
+
+</div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+
+</div>
+
+</body></html>

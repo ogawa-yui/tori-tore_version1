@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+<header class="site-header">
+  <nav>
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user>　さん </li>
+    </ul>
+  </nav>
+</header>
+
+<h1>ログイン成功</h1>
+<div id="container_vertically_long">
+  <div id="itemM">
+    <p class="sub_title">
+      <form method="post" action="<tmpl_var name = content_url>" >
+        <p class="login"><font color="red">ログインしました。</font><br><br>
+	      <tmpl_var name = content_info>
+	      <input type="hidden" name="user" value="<tmpl_var name = user>">
+ 	      <input type="hidden" name="password" value="<tmpl_var name = password>">
+ 	      <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>"
+	    </p>
+	    
+	  </form>
+    </p>
+    
+    <h2><tmpl_var name = user> さんのステータス</h2>
+    <p class="login">
+      ・ログイン　　：<tmpl_var name = login_date>日目　<br>
+      ・クイズ回答数：<tmpl_var name = count>問　<br>
+    </p>
+    <tmpl_if name="quiz">
+      <form method="post" action="11_count_accuracy.cgi" > 
+        <p class="login">・正解数の詳細：
+          <input type="hidden" name="user" value="<tmpl_var name=user>" >
+          <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>" >
+          <input type="submit" value="こちら" class="btn">
+          <br>（今までの正解傾向が見られます）
+        </p>
+      </form><br><br>
+    </tmpl_if>
+    <h2>ログイン履歴（直近10回分）</h2>
+    <p class="login"><tmpl_var name = login_history></p>
+    
+  </div>
+  
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+
+</div>
+
+</body></html>

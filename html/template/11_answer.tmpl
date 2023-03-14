@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<script src="js/audio.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+audiojs.events.ready(function() {
+var as = audiojs.createAll();
+});
+</script>
+
+<title>とりトレ</title>
+<link rel="stylesheet"  href="css/toritore_style.css">
+</head>
+
+<body>
+
+<form method="post" action="00_login_01.cgi">
+<header class="site-header">
+
+<nav  class="gnav">
+    <ul class="gnav__menu">
+    	<li class="gnav__menu__item">とりトレ</li>
+    	<li class="gnav__menu__item">Username: <tmpl_var name = user> さん　
+          <input type="submit" value="保存（ログアウト）" class="btn" > 
+          <input type="hidden" name="user" value="<tmpl_var name = user>" ></form>
+    	</li>
+    	<li class="gnav__menu__item">
+    	  本日<tmpl_var name = num_quiz_solved_today>問、
+    	  累計<tmpl_var name = num_quiz_solved_allday>問解きました。
+    	<tmpl_if name="goal_achieved_today">
+    	  本日のトレーニングは終了です！
+    	<tmpl_else>
+    	  本日あと<tmpl_var name = num_quiz_left_today>問！
+    	</tmpl_if>
+    	</li>
+		
+
+	</ul>
+
+</nav>
+</header>
+</form>
+
+
+<h1>鳴き声クイズ
+  <tmpl_if name = "all_learned">
+    <font color='red'>　全種制覇！！おめでとうございます！</font>
+  </tmpl_if></h1>
+  
+<div id="container">
+  <div id="itemA">
+    <p class="correct_or_incorrect"><tmpl_var name = correct_or_incorrect ></p>
+    <table>
+      <tmpl_var name= choices_jp_table > 
+    </table>
+    <p class="font50">
+      ＞<a href="song_call_guide.html" target="_blank">鳴き声の種類・「さえずりナビ」「BIRD FAN」とは</a><br>
+      
+    </p>
+    <p class="font75"><tmpl_var name= master ></p>
+  </div><!--A-->
+  
+  <div id="itemB">
+    <img src="img/<tmpl_var name = sp_roman >.jpg" width="150" height="150" title="<tmpl_var name = answer_license >" alt="<tmpl_var name = correct_answer >">
+    </div><!--B-->
+  
+  <div id="itemC">
+    <tmpl_var name = accuracy_rate_today ><br>
+    <tmpl_var name = accuracy_rate_allday ><br><br>
+    <tmpl_var name = mp3_license >
+  </div><!--C-->
+  
+  <div id="itemD">
+    <div class="vertical"><img src="spectrogram/<tmpl_var name = spectrogram >.png" width="320" height="200" title="<tmpl_var name = correct_answer >のソナグラム" alt="<tmpl_var name = correct_answer >のソナグラム" align="left"><br>
+    ←高い 周波数(kHz) 低い→</div>
+    　　　　　　　経過時間（秒）
+  </div><!--D-->
+  
+  <div id="itemE">
+    <tmpl_var name = correct_answer >の音源<audio src='<tmpl_var name = mp3_file_path_name >' autoplay></audio><br><br>
+    
+    <form method="post" action="11_spectrogram.cgi" target="_blank">
+      <input type="submit" value="ソナグラムを拡大"  class="btn" target="_blank">
+      <input type="hidden" name="correct_answer" value="<tmpl_var name = correct_answer>" >
+      <input type="hidden" name="mp3_file_path_name" value="<tmpl_var name = mp3_file_path_name>" >
+      <input type="hidden" name="spectrogram" value="<tmpl_var name = spectrogram>" >
+    </form><br>
+    ＞<a href="about_spectrogram.html" target="_blank">ソナグラムとは</a>
+  </div><!--E-->
+  
+  <div id="itemF">
+
+  </div><!--F-->
+  
+  <div id="itemH">
+    <p> 
+	  <form method="post" action="<tmpl_var name =  content_url>" >
+	  <input type="submit" value="<tmpl_var name =  content_info>" class="next">
+    </p>
+    <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>" >
+    <input type="hidden" name="user" value="<tmpl_var name = user>" >
+    <input type="hidden" name="sp_roman" value="<tmpl_var name = sp_roman>" ></form>
+  </div><!--H-->
+
+  <div id="itemG">
+    <form method="post" action="11_count_accuracy.cgi" > 
+      <p class="form"><input type="submit" value="正解数の詳細へ" class="btn"></p>
+      <input type="hidden" name="user" value="<tmpl_var name = user>" >
+      <input type="hidden" name="sp_roman" value="<tmpl_var name = sp_roman>" >
+      <input type="hidden" name="logout" value="<tmpl_var name = logout>" >
+      <input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>" >
+      <input type="hidden" name="num_quiz_solved_allday" value="<tmpl_var name = num_quiz_solved_allday>" >
+    </form>
+  </div><!--G-->
+  
+
+  
+  <div id="itemI">
+  </div>
+  
+  <div id="itemJ">
+  </div>
+  <div id="itemP">
+  </div>
+</div><!--countainer-->
+</body></html> 

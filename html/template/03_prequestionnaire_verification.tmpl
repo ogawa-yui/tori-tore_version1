@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav  class="gnav">
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user> さん</li>
+    </ul>
+  </nav>
+</header>
+
+<h1>回答の確認</h1>
+<div id="container_vertically_long">
+  <div id="itemM">
+
+回答は以下の通りです。<br><br>
+<hr>
+<b>実験への同意：<tmpl_var name = confirm ><br><br>
+<tmpl_var name = q1 >：
+<tmpl_var name = a1 ><br><br>
+<tmpl_var name = q2 ><br>
+<tmpl_var name = q2_1 >：
+<tmpl_var name = a2_1 ><br>
+<tmpl_var name = q2_2 >：
+<tmpl_var name = a2_2 ><br><br>
+<tmpl_var name = q3 >：
+<tmpl_var name = a3 ><br><br>
+<tmpl_var name = q4 >：
+<tmpl_var name = a4 ><br><br>
+<tmpl_var name = q5 >：
+<tmpl_var name = a5 ><br><br>
+<tmpl_var name = q6 >：
+<tmpl_var name = a6 ><br><br>
+<tmpl_var name = q7 >：
+<tmpl_var name = a7 ><br><br>
+<tmpl_var name = q8 >：
+<tmpl_var name = a8 >　<tmpl_var name = a8_7_for_display ><br><br>
+<tmpl_var name = q9 ><br>
+<tmpl_var name = q9_1 >：
+<tmpl_var name = a9_1 ><br>
+<tmpl_var name = q9_2 >：
+<tmpl_var name = a9_2 ><br>
+<tmpl_var name = q9_3 >：
+<tmpl_var name = a9_3 >　<tmpl_var name = a9_4_for_display ><br><br>
+</b>
+<hr><br>
+修正する場合はブラウザの戻るボタンをクリックしてください。<br>
+これでよろしい場合は以下をクリックしてください。
+<br><br>
+<form method="post" action="04_sound_setting.cgi" >
+<input type="hidden" name="user" value="<tmpl_var name = user>">
+<input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>">
+<input type="hidden" name="confirm" value="<tmpl_var name = confirm>">
+<input type="hidden" name="a1" value="<tmpl_var name = a1>">
+<input type="hidden" name="a2_1" value="<tmpl_var name = a2_1>">
+<input type="hidden" name="a2_2" value="<tmpl_var name = a2_2>">
+<input type="hidden" name="a3" value="<tmpl_var name = a3>">
+<input type="hidden" name="a4" value="<tmpl_var name = a4>">
+<input type="hidden" name="a5" value="<tmpl_var name = a5>">
+<input type="hidden" name="a6" value="<tmpl_var name = a6>">
+<input type="hidden" name="a7" value="<tmpl_var name = a7>">
+<input type="hidden" name="a8" value="<tmpl_var name = a8>">
+<input type="hidden" name="a8_1_or_0" value="<tmpl_var name = a8_1_or_0>">
+<input type="hidden" name="a8_7" value="<tmpl_var name = a8_7>">
+<input type="hidden" name="a9_1" value="<tmpl_var name = a9_1>">
+<input type="hidden" name="a9_2" value="<tmpl_var name = a9_2>">
+<input type="hidden" name="a9_3" value="<tmpl_var name = a9_3>">
+<input type="hidden" name="a9_4" value="<tmpl_var name = a9_4>">
+<input type="submit" value="提出する" class="btn"></form><br>
+
+  </div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+
+</div>
+</body></html>

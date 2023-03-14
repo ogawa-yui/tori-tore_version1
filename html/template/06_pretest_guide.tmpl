@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+
+<form name="form1" method="post" action="00_login_01.cgi">
+<header class="site-header">
+  <nav  class="gnav">
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user>さん　
+      <input type="submit" value="保存（ログアウト）" class="btn"></form>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<h1>事前腕試しの方法</h1>
+<div id="container_vertically_long">
+  <div id="itemM">
+
+<p>　クイズトレーニングを行っていただく前に、「事前腕試し」として野鳥の鳴き声を当てるいくつかのテストを行います。
+テストの成績による不利益は一切ありません。</p>
+<p>　ただし、<font color="red">わからない場合でも、音声を聞いたのちに回答をお願いいたします。</font>
+（回答結果はユーザーごとに集計しているため、音声をほとんど聞かずに回答した場合、管理者のほうで確認できます）。</p>
+　研究で使用するデータのため、何卒ご協力をお願いいたします。<br><br>
+【注意事項】<br>
+<ul>
+<li>次のページから野鳥の音声が自動で再生されますのでご注意ください。</li>
+<li>テストは全部で<tmpl_var name = n_question>問あり、目安としては5分ほどかかります。</li>
+<li>クイズトレーニングの効果を正確に測定するために<tmpl_var name = n_question>問解いていただく必要があります。</li>
+<li>26択の選択式になっていて、時間制限はありません。</li>
+<li><font color="red">腕試しは難易度高めです。場合によっては1問も正解できないかもしれませんが、<br>
+クイズトレーニングを行うことで、正解できるようになる可能性が高まります。</font></li>
+</ul><br>
+【参考】<br>
+<ul>
+<li>出題される鳴き声の種類については、<a href="song_call_guide.html" target="_blank">こちら</a>をご覧ください。</li>
+<li>本システム「とりトレ」、および本研究プロジェクトについては、<a href="about.html" target="_blank">こちら</a>をご覧ください。</li>
+<li>このサイトで使用されている野鳥の鳴き声の音声ファイルは、<a href="https://www.bird-research.jp/index.html" target="_blank">NPO法人バードリサーチ</a>からご提供いただいたものです。<br>
+また、一部<a href="https://www.xeno-canto.org/" target="_blank">xeno-canto</a>の音声も使用しています。詳しくは<a href="about.html" target="_blank">こちら</a>をご覧ください。<!--特定の場所に飛ばす-->
+</ul><br>
+【操作方法】<br>
+<p>　配布したファイル「実験実施上の注意と手順」をご覧ください。</p>
+<br>
+<p>以下をクリックするとテストが開始されます。</p>
+<form method="post" action="07_pretest.cgi" >
+<input type="hidden" name="user" value="<tmpl_var name = user>">
+<input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>">
+<input type="submit" value="腕試し開始"  class="btn"></form>
+
+  </div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+
+</div>
+</body></html>

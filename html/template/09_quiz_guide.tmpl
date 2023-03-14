@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css"> 
+</head>
+
+<body>
+
+<form name="form1" method="post" action="00_login_01.cgi">
+<header class="site-header">
+<nav  class="gnav">
+<ul class="gnav__menu">
+<li class="gnav__menu__item">とりトレ</li>
+<li class="gnav__menu__item">Username: <tmpl_var name = user>さん　
+<input type="submit" value="保存（ログアウト）" class="btn"></form>
+</li>
+</ul>
+</nav>
+</header>
+
+<h1>クイズ回答方法</h1>
+<div id="container_vertically_long">
+<div id="itemM">
+<p class="sub_title">
+
+</p>
+鳴き声当てクイズを行っていただきます（本日は<font color="red"><u><tmpl_var name = n_quizzes_per_day>問解いてください</u></font>）。<br>
+クイズの方法は事前腕試しと違い5択から選択する形式となり、１問ずつ答え合わせを行います。<br>
+わからない場合でも、音声を聞いて回答をお願いいたします。
+（回答結果はユーザーごとに集計しているため、音声をほとんど聞かずに回答した場合、管理者のほうで確認できます）。<br>
+研究で使用するデータのため、何卒ご協力をお願いいたします。<br>
+<br>
+【操作方法】<br>
+配布したファイル「とりトレ 実施の手順」をご覧ください。
+
+<br><br>
+<br>
+【注意事項】<br>
+実験2,3,5,6日目は、クイズを1日<tmpl_var name = n_quizzes_per_day>問を解いてください。<br>
+<font color="red"><u>その日の23:59までに<tmpl_var name = n_quizzes_per_day>問のクイズを解き終わらないと実験終了となり、謝金を受け取ることができません。</u> </font><br>
+ただし、その日のなかであれば分散してクイズを解いていただくことができます（まとめて<tmpl_var name = n_quizzes_per_day>問解かなくても構いません）。
+<form method="post" action="10_quiz.cgi" >
+<p class="font150">
+クイズ開始は<input type="submit" value="こちら" class="btn">をクリックしてください。</p><br>
+<input type="hidden" name="user" value="<tmpl_var name=user>" >
+<input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>" >
+</form>
+</div>
+<div id="itemN">
+</div>
+<div id="itemO">
+</div>
+<div id="itemP">
+</div>
+
+</div>
+</body></html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<title>とりトレ</title>
+<link rel="stylesheet"   href="css/toritore_style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav  class="gnav">
+    <ul class="gnav__menu">
+      <li class="gnav__menu__item">とりトレ</li>
+      <li class="gnav__menu__item">Username: <tmpl_var name = user>　さん </li>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<h1>音声再生設定 変更・確認のお願い</h1>
+<div id="container_vertically_long">
+  <div id="itemM">
+<p class="sub_title">
+
+</p>
+
+アンケートへのご回答ありがとうございました。<br>
+<br>
+とりトレでは、野鳥の鳴き声が自動再生されます。<br>
+クイズ等できちんと音声が再生されるよう、事前に音声再生設定の確認をお願いします。<br>
+以下に、お使いのブラウザごとの確認方法が記載されています。<br><br>
+＞<a href="#chrome">Google Chromeをお使いの方</a><br>
+＞<a href="#edge">Microsoft Edgeをお使いの方</a><br>
+＞<a href="#safari">Safariをお使いの方</a><br>
+<a class="no_decoration" name="chrome"></a><br>
+<h3>Google Chromeをお使いの方</h3>
+※デフォルトでは自動再生が許可されています。<br><br>
+1. ブラウザの検索欄の左側にある🔒(鍵)ボタンをクリック<br>
+2. 「サイトの設定」をクリック<br>
+3. 「権限」の「音声の設定」が「自動（デフォルト）」あるいは「許可」となっているか確認し、<br>
+   「ミュート」になっていたら、「自動（デフォルト）」あるいは「許可」に変更する
+<p class="guide"><img src="guide/Chrome1.png" width="500" title="Chrome1.png" align="center"></p>
+<p class="guide"><img src="guide/Chrome2.png" width="500" title="Chrome2.png" align="center"></p>
+＞<a href="#confirm">確認チェックへ</a>（一番下に移動します）<br>
+<h3><a class="no_decoration" name="edge"></a><br>
+Microsoft Edgeをお使いの方</h3>
+※デフォルトでは自動再生が許可されています。<br><br>
+1. ブラウザの検索欄の左側にある🔒(鍵)ボタンをクリック<br>
+2. 「サイトのアクセス許可」をクリック<br>
+3. 左側の「設定」にある「サイトのアクセス許可」をクリック<br>
+4. スクロールし、「メディアの自動再生」をクリック<br>
+5. 「メディアの自動再生」が「許可」となっているか確認し、<br>
+   「制限」あるいは「禁止」になっていたら、「許可」に変更する
+<p class="guide"><img src="guide/Edge1.png" width="500" title="Edge1.png" align="center"></p>
+<p class="guide"><img src="guide/Edge2.png" width="500" title="Edge2.png" align="center"></p>
+<p class="guide"><img src="guide/Edge3.png" width="500" title="Edge3.png" align="center"></p>
+<p class="guide"><img src="guide/Edge4.png" width="500" title="Edge4.png" align="center"></p>
+＞<a href="#confirm">確認チェックへ</a>（一番下に移動します）<br>
+<a class="no_decoration" name="safari"></a><br>
+<h3>Safariをご利用をお使いの方</h3>
+※デフォルトでは<font color="red">自動再生が許可されていません！</font><br><br>
+1. 左上にある「Safari」→「このWebサイトでの設定」の順番でクリック<br>
+2. 「自動再生」を「すべてのメディアを自動再生」に設定する
+  <p class="guide"><img src="guide/Safari1.png" width="500" title="Safari1.png" align="center"></p>
+  <p class="guide"><img src="guide/Safari2.png" width="500" title="Safari2.png"></p>
+<br><br>
+
+<form method="post" action="05_sound_test.cgi" >
+<a class="no_decoration" name="confirm"><b>ご自身がお使いのブラウザでの自動再生に関する設定を確認し、必要な場合（特にSafari）
+に設定を変更しましたか？</b></a><br>
+<label><input type="checkbox" name="confirm" value="確認・変更した" required>確認・変更した</label><br><br>
+確認・変更ができましたら、続いて音声が再生されるかテストを行います。<br>
+
+<input type="hidden" name="user" value="<tmpl_var name = user>">
+<input type="hidden" name="adaptive" value="<tmpl_var name = adaptive>">
+<input type="submit" value="音声再生テスト画面へ"  class="btn"></form>
+<br><br>
+  </div>
+  <div id="itemN">
+  </div>
+  <div id="itemO">
+  </div>
+  <div id="itemP">
+  </div>
+<br><br>
+</div>
+</body></html>
